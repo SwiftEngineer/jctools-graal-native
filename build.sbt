@@ -2,7 +2,7 @@ import sbt._
 
 lazy val root = (project in file("."))
   .settings(
-    name := "jctools-graal-native",
+    name := "jctools-graal-native_20_2_0",
     version := "1.0.0"
   )
   .settings(
@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
     crossPaths := false,
 
     // Used to define the substitutions that are necessary for native image creation
-    libraryDependencies += "com.oracle.substratevm" % "svm" % "19.2.1" % Provided,
+    libraryDependencies += "org.graalvm.nativeimage" % "svm" % "20.2.0" % Provided
   )
 
 
